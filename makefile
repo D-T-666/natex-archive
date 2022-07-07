@@ -5,6 +5,10 @@ clean-trash:
 create-build-dir:
 	mkdir -p build
 
-2021-ii: create-build-dir
-	cd years/2021/ii; ls; xelatex -output-directory=../../../build main.tex 
+year: create-build-dir
+	cd years/$(YEAR)/$(VARIANT); \
+	xelatex -output-directory=../../../build \
+			-jobname=$(YEAR)-$(VARIANT) \
+			main.tex
+
 	make clean-trash
