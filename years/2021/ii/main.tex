@@ -2,11 +2,11 @@
 
 \begin{document}
 \begin{enumerate}
-    \item \input{01}
-    \item \input{02}
-    \item \input{03}
-    \item \input{04}
-    \item \input{05}
+    \foreach \i in {1,...,35} {%
+        \edef\FileName{\i}
+        \IfFileExists{\FileName}{
+            \item[\i.] \input{\FileName}
+        }
+    }
 \end{enumerate}
 \end{document}
-

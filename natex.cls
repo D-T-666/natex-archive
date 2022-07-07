@@ -28,6 +28,20 @@
 
 \usepackage{fontspec}
 
-\setmainfont{BPG Arial}
+% \setmainfont{BPG Arial}
+\setmainfont{GA Sylvia}
+
+\usepackage{pgffor}
+% \RequirePackage{filecontents}
+
+\newcommand{\answers}[4]{
+    \vspace*{0.5cm}
+    \begin{tasks} (4)
+        \task[ა)] #1
+        \task[ბ)] #2
+        \task[გ)] #3
+        \task[დ)] #4
+    \end{tasks}
+}
 
 \endinput
